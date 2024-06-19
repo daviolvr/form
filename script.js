@@ -39,7 +39,7 @@ function submit() {
     }
 
     const existingMessage = document.querySelector('.invalid-message');
-    
+
     if (existingMessage) {
         return;
     }
@@ -61,7 +61,6 @@ function submit() {
             'E-mail address': email,
             'Query Type': queryType,
             'Message': message,
-            'Consent': isChecked ? 'Yes' : 'No'
         };
         console.log(JSON.stringify(formData));
         form.innerHTML = '<p>Formulário enviado! <span class="approved">&#10004;</span></p>';
