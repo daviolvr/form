@@ -1,0 +1,115 @@
+:root {
+    --button-color: rgb(28, 129, 104);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(219, 233, 245)
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.label-margin {
+    margin-bottom: 10px;
+}
+
+.names-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+.name-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#first-name, #last-name, #email {
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.radio-field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+    gap: 10px;
+}
+
+.message-container, .email-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.names-container, 
+.message-container, 
+.email-container,
+.radio-container,
+.checkbox-container {
+    margin-bottom: 15px;
+}
+
+#message {
+    padding: 5px 5px 40px 5px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+#terms {
+    margin-right: 5px;
+}
+
+button {
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: var(--button-color);
+    border: 1px solid var(--button-color);
+    border-radius: 7px;
+}
+
+button:hover {
+    background-color: rgb(24, 100, 80);
+    cursor: pointer;
+}
+
+p.invalid-message {
+    color: red;
+    margin-top: 15px;
+}
