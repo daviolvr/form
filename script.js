@@ -28,12 +28,18 @@ function submit() {
     const isChecked = checkboxField.checked;
 
     let radioChecked = false;
+    let queryType = '';
 
-    if (radioSupport.checked || radioGeneral.checked) {
+    if (radioSupport.checked) {
         radioChecked = true;
+        queryType = 'Support Request';
+    } else if (radioGeneral.checked) {
+        radioChecked = true;
+        queryType = 'General Enquiry';
     }
 
     const existingMessage = document.querySelector('.invalid-message');
+    
     if (existingMessage) {
         return;
     }
@@ -49,7 +55,15 @@ function submit() {
             paraInvalid.remove();
         }, 5000);
     } else {
+        const formData = {
+            'First name': firstName,
+            'Last name': lastName,
+            'E-mail address': email,
+            'Query Type': queryType,
+            'Message': message,
+            'Consent': isChecked ? 'Yes' : 'No'
+        };
+        console.log(JSON.stringify(formData));
         form.innerHTML = '<p>Formulário enviado! <span class="approved">&#10004;</span></p>';
     }
 }
-
